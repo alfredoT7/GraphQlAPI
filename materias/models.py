@@ -43,7 +43,7 @@ class Entrega(models.Model):
     retraso_entrega=models.DateField(null=False)
     calificacion=models.IntegerField(null=False, validators=[MinValueValidator(1),MaxValueValidator(100)])
     tarea=models.ManyToManyField(Tarea, related_name='tarea_entrega')
-    archivo=models.BinaryField(null=True, )
+    #archivo=models.BinaryField(null=True)
     def __str__(self):
         return self.calificacion
 
